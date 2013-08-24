@@ -8,7 +8,7 @@ game.PlayScreen = me.ScreenObject.extend({
 
         // reload HUD timer
         me.game.HUD.removeItem("timer");
-        me.game.HUD.addItem("timer", new game.TimerObject(100, 10));
+        me.game.HUD.addItem("timer", new game.TimerObject(150, 10));
 
         var timerStep = 1;
         timer = setInterval(function() {
