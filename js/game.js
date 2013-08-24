@@ -40,6 +40,8 @@ var game = {
        // set the "Play/Ingame" Screen Object
        me.state.set(me.state.PLAY, new game.PlayScreen());
          
+       me.state.set(me.state.WIN, new game.WinScreen());
+
        // add our player entity in the entity pool
        me.entityPool.add("mainPlayer", game.PlayerEntity);
        me.entityPool.add("PooEntity", game.PooEntity);
