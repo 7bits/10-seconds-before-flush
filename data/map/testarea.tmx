@@ -41,7 +41,7 @@
   </data>
  </layer>
  <objectgroup name="EnemyEntities" width="50" height="23">
-  <object name="EnemyEntity" x="638" y="319" width="384" height="32"/>
   <object name="FlowerEntity" x="543" y="294" width="32" height="56"/>
+  <object name="ButterflyEntity" x="328" y="37" width="187" height="183"/>
  </objectgroup>
 </map>
