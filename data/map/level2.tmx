@@ -37,7 +37,7 @@
    <properties>
     <property name="duration" value="250"/>
     <property name="fade" value="#FFFFFF"/>
-    <property name="to" value="level2"/>
+    <property name="to" value="level3"/>
    </properties>
   </object>
   <object name="PooEntity" x="205" y="389" width="47" height="22"/>
