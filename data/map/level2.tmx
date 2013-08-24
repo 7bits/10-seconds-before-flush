@@ -48,7 +48,7 @@
  <objectgroup name="EnemyEntities" width="40" height="15">
   <object name="ButterflyEntity" x="428" y="128" width="146" height="126"/>
   <object name="ButterflyEntity" x="801" y="90" width="181" height="69"/>
-  <object name="ButterflyEntity" x="353" y="315" width="30" height="67"/>
+  <object name="FlowerEntity" x="353" y="315" width="30" height="67"/>
   <object name="FlowerEntity" x="800" y="316" width="30" height="67"/>
   <object name="FlowerEntity" x="1122" y="186" width="30" height="67"/>
  </objectgroup>
