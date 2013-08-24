@@ -85,6 +85,16 @@ game.PlayerEntity = me.ObjectEntity.extend({
         // any update (e.g. position, animation)
         return false;       
      
+    },
+
+    die: function() {
+        this.alive = false;
+        invisibility = false;
+        speed = false;
+        me.gamestat.reset();
+        me.game.HUD.removeItem("timer");
+        me.levelDirector.reloadLevel();
+        me.state.change(me.state.PLAY);
     }
      
 });

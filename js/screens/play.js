@@ -18,16 +18,17 @@ game.PlayScreen = me.ScreenObject.extend({
     timer = setInterval(function() {
       var oldTimerValue = me.game.HUD.getItemValue("timer");
 
-      if (oldTimerValue - timerStep >= 0) {
-        me.game.HUD.updateItemValue("timer", -timerStep);
-      } else {
-        // flush!
-        clearInterval(timer);
-      }
-    }, 100);
-
-    // make sure everything is in the right order
-    me.game.sort();
+            if (oldTimerValue - timerStep >= 0) {
+              me.game.HUD.updateItemValue("timer", -timerStep);
+            } else {
+              clearInterval(timer);
+              var player = me.game.getEntityByName("mainPlayer")[0]
+              player.die();
+            }
+          }, 100);
+ 
+          // make sure everything is in the right order
+          me.game.sort();
 	},
 	
 	/**	
