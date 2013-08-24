@@ -208,12 +208,20 @@ game.ButterflyEntity = me.ObjectEntity.extend({
             if (this.floatLeft && this.pos.x <= this.startX) {
                 this.floatLeft = false;
             } else if (!this.floatLeft && this.pos.x >= this.endX) {
-                this.floatLeft = true;
+                if (Math.random() >= 0.5) {
+                  this.floatLeft = true;
+                } else {
+                  this.floatLeft = false;
+                }
             }
             if (this.floatTop && this.pos.y <= this.startY) {
                 this.floatTop = false;
             } else if (!this.floatTop && this.pos.y >= this.endY) {
-                this.floatTop = true;
+                if (Math.random() >= 0.5) {
+                  this.floatTop = true;
+                } else {
+                  this.floatTop = false;
+                }
             }
             // make it walk
             this.flipX(this.floatLeft);
@@ -221,7 +229,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
 
             this.vel.x += (this.floatLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
             this.vel.y += (this.floatTop) ? -this.accel.y * me.timer.tick : this.accel.y * me.timer.tick;
-                 
+
         } else {
             this.vel.x = 0;
             this.vel.y = 0;
