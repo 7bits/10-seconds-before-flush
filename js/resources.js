@@ -4,10 +4,15 @@ game.resources = [
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
-        {name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
+    // game font
+	{name: "32x32_font",          type:"image",	src: "data/img/font/32x32_font.png"},
+	// title screen
+	{name: "title_screen",        type:"image",	src: "data/img/gui/title_screen.png"},
+
+	{name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
 	
-        {name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
-        {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
+    {name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
+    {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -18,12 +23,14 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
-	{name: "testarea", type: "tmx", src: "data/map/level1.tmx"},
+	{name: "level1", type: "tmx", src: "data/map/level1.tmx"},
+	{name: "level2", type: "tmx", src: "data/map/level2.tmx"},
+	{name: "level3", type: "tmx", src: "data/map/level3.tmx"},
 
         // the spinning coin spritesheet
-        {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
+    {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
         // our enemty entity
-        {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
+    {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
 
 	/* Background music. 
 	 * @example

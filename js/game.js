@@ -35,7 +35,7 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-      //me.state.set(me.state.MENU, new game.TitleScreen());
+       me.state.set(me.state.MENU, new game.TitleScreen());
         
        // set the "Play/Ingame" Screen Object
        me.state.set(me.state.PLAY, new game.PlayScreen());
@@ -53,6 +53,6 @@ var game = {
        me.input.bindKey(me.input.KEY.X,     "jump", true);
           
        // start the game 
-       me.state.change(me.state.PLAY);
+       me.state.change(me.state.MENU);
     }
 };
