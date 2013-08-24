@@ -8,6 +8,7 @@ game.resources = [
 	{name: "32x32_font",          type:"image",	src: "data/img/font/32x32_font.png"},
 	// title screen
 	{name: "title_screen",        type:"image",	src: "data/img/gui/title_screen.png"},
+	{name: "win_screen",        type:"image",	src: "data/img/gui/win_screen.png"},
 
 	{name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
 	
