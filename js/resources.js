@@ -25,6 +25,8 @@ game.resources = [
         // our enemty entity
         {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
 
+        // game font
+        {name: "32x32_font",          type:"image", src: "data/img/font/32x32_font.png"},
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
