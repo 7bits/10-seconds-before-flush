@@ -46,25 +46,13 @@
   </data>
  </layer>
  <objectgroup name="EnemyEntities" width="40" height="15">
-  <object name="ButterflyZoneEntity" x="428" y="128" width="146" height="126"/>
-  <object name="ButterflyZoneEntity" x="205" y="194" width="146" height="126"/>
-  <object name="ButterflyZoneEntity" x="729" y="88" width="181" height="69"/>
-  <object name="ButterflyZoneEntity" x="1157" y="97" width="91" height="101"/>
+  <object name="ButterflyEntity" x="428" y="128" width="146" height="126"/>
+  <object name="ButterflyEntity" x="205" y="194" width="146" height="126"/>
+  <object name="ButterflyEntity" x="729" y="88" width="181" height="69"/>
+  <object name="ButterflyEntity" x="1157" y="97" width="91" height="101"/>
   <object name="FlowerEntity" x="353" y="315" width="30" height="67"/>
   <object name="FlowerEntity" x="800" y="316" width="30" height="67"/>
   <object name="FlowerEntity" x="1122" y="186" width="30" height="67"/>
   <object name="FlowerEntity" x="1159" y="347" width="30" height="67"/>
-  <object name="ButterflyEntity" x="267" y="229">
-   <ellipse/>
-  </object>
-  <object name="ButterflyEntity" x="510" y="157">
-   <ellipse/>
-  </object>
-  <object name="ButterflyEntity" x="773" y="119">
-   <ellipse/>
-  </object>
-  <object name="ButterflyEntity" x="1226" y="165">
-   <ellipse/>
-  </object>
  </objectgroup>
 </map>
