@@ -247,3 +247,26 @@ game.ButterflyEntity = me.ObjectEntity.extend({
         return false;
     }
 });
+
+/*-------------- 
+Timer HUD
+--------------------- */
+ 
+game.TimerObject = me.HUD_Item.extend({
+    init: function(x, y) {
+        // call the parent constructor
+        this.parent(x, y);
+        // create a font
+        this.font = new me.BitmapFont("32x32_font", 32);
+        this.font.set("right");
+
+        this.value = 100;
+    },
+ 
+    draw: function(context, x, y) {
+        // draw human readable seconds instead of milliseconds
+        var humanReadable = this.value / 10;
+        humanReadable = humanReadable.toFixed(1);
+        this.font.draw(context, humanReadable, this.pos.x + x, this.pos.y + y);
+    }
+});
