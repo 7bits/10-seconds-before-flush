@@ -6,6 +6,8 @@ game.resources = [
 	 */
         {name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
 	
+        {name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
+        {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
