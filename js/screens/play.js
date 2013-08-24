@@ -21,8 +21,9 @@ game.PlayScreen = me.ScreenObject.extend({
             if (oldTimerValue - timerStep >= 0) {
               me.game.HUD.updateItemValue("timer", -timerStep);
             } else {
-              // flush!
               clearInterval(timer);
+              var player = me.game.getEntityByName("mainPlayer")[0]
+              player.die();
             }
           }, 100);
  
