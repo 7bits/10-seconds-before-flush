@@ -16,7 +16,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.velocityStep = this.maxVel.x * 0.1;
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
- 
     },
 
     /* -----
@@ -92,9 +91,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         invisibility = false;
         speed = false;
         me.gamestat.reset();
-        me.game.HUD.removeItem("timer");
         me.levelDirector.reloadLevel();
-        me.state.change(me.state.PLAY);
     }
      
 });

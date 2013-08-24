@@ -1,19 +1,15 @@
 var timer;
 
 game.PlayScreen = me.ScreenObject.extend({
-    /**	
-     *  action to perform on state change
-     */
-    onResetEvent: function() {	
-        me.levelDirector.loadLevel("level1");
 
-        // add a default HUD to the game mngr
-        me.game.addHUD(50, 50, 200, 50);
+    // timer for flush
+    setTimer: function() {
+        clearInterval(timer);
 
-        // add a new HUD item
+        // reload HUD timer
+        me.game.HUD.removeItem("timer");
         me.game.HUD.addItem("timer", new game.TimerObject(100, 10));
 
-        // timer for flush
         var timerStep = 1;
         timer = setInterval(function() {
             var oldTimerValue = me.game.HUD.getItemValue("timer");
@@ -26,7 +22,20 @@ game.PlayScreen = me.ScreenObject.extend({
                 player.die();
             }
         }, 100);
-   
+    },
+
+    /**	
+     *  action to perform on state change
+     */
+    onResetEvent: function() {	
+        me.levelDirector.loadLevel("level1");
+
+        // add a default HUD to the game mngr
+        me.game.addHUD(50, 50, 200, 50);
+
+        this.setTimer();
+        me.game.onLevelLoaded = this.setTimer.bind(this);
+
         // make sure everything is in the right order
         me.game.sort();
     },
