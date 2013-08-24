@@ -45,6 +45,7 @@ var game = {
        me.entityPool.add("PooEntity", game.PooEntity);
        me.entityPool.add("FlowerEntity", game.FlowerEntity);
        me.entityPool.add("ButterflyEntity", game.ButterflyEntity);
+       me.entityPool.add("LadderEntity", game.LadderEntity);
                  
        // enable the keyboard
        me.input.bindKey(me.input.KEY.LEFT,  "left");
