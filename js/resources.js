@@ -20,6 +20,11 @@ game.resources = [
  	 */
 	{name: "testarea", type: "tmx", src: "data/map/testarea.tmx"},
 
+        // the spinning coin spritesheet
+        {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
+        // our enemty entity
+        {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
+
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
