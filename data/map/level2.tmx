@@ -27,10 +27,10 @@
   </data>
  </layer>
  <objectgroup color="#00ff00" name="Entities" width="40" height="15">
-  <object name="MainPlayer" x="64" y="292" width="62" height="121">
+  <object name="MainPlayer" x="64" y="191" width="96" height="96">
    <properties>
-    <property name="image" value="gripe_run_right"/>
-    <property name="spritewidth" value="64"/>
+    <property name="image" value="monstr"/>
+    <property name="spritewidth" value="96"/>
    </properties>
   </object>
   <object name="me.LevelEntity" x="1153" y="31" width="64" height="97">
