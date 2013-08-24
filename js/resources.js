@@ -18,7 +18,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
-	{name: "testarea", type: "tmx", src: "data/map/testarea.tmx"},
+	{name: "testarea", type: "tmx", src: "data/map/level1.tmx"},
 
         // the spinning coin spritesheet
         {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
