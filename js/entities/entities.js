@@ -11,7 +11,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
  
         // set the default horizontal & vertical speed (accel vector)
-        this.setVelocity(7, 15);
+        this.setVelocity(7, 20);
         this.minVel = { x : 3, y : 15}; 
         this.velocityStep = this.maxVel.x * 0.1;
         // set the display to follow our position on both axis
