@@ -28,12 +28,9 @@
     <property name="spritewidth" value="64"/>
    </properties>
   </object>
-  <object name="CoinEntity" x="445" y="320" width="36" height="30">
-   <properties>
-    <property name="image" value="spinning_coin_gold"/>
-    <property name="spritewidth" value="32"/>
-   </properties>
-  </object>
+  <object name="PooEntity" x="638" y="316" width="36" height="30"/>
+  <object name="PooEntity" x="445" y="312" width="36" height="30"/>
+  <object name="PooEntity" x="872" y="314" width="36" height="30"/>
  </objectgroup>
  <layer name="collision" width="50" height="23">
   <data encoding="base64">
@@ -41,7 +38,7 @@
   </data>
  </layer>
  <objectgroup name="EnemyEntities" width="50" height="23">
-  <object name="FlowerEntity" x="543" y="294" width="32" height="56"/>
+  <object name="FlowerEntity" x="1513" y="292" width="32" height="56"/>
   <object name="ButterflyEntity" x="328" y="37" width="187" height="183"/>
  </objectgroup>
 </map>
