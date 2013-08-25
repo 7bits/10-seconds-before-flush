@@ -20,8 +20,8 @@ game.PlayScreen = me.ScreenObject.extend({
             } else {
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
-                player.die();
-                me.state.change(me.state.FLUSH);
+                //player.die();
+                me.state.change(me.state.MENU);
             }
         }, 100);
       }
