@@ -1,10 +1,12 @@
 var bullet = me.ObjectEntity.extend({
 
-    init: function (x, y, playerVelocity, settings) {
+    init: function (x, y, playerVelocity, direction, settings) {
         this.parent(x, y, settings);
         this.collidable = true;
         this.gravity = 0;
         this.initVelocity = playerVelocity;
+        this.shootDirection = direction;
+        console.log(this.shootDirection);
     },
 
     update: function () {
@@ -16,7 +18,12 @@ var bullet = me.ObjectEntity.extend({
 
         // speed up
 
-        this.vel.x = this.initVelocity.x + 15;
+        var velocity = this.initVelocity.x + 15;
+
+        if(this.shootDirection === 'left') {
+          velocity = - 10;
+        }
+        this.vel.x = velocity;
 
         this.olderX = this.oldX;
         this.oldX = this.prevX;
