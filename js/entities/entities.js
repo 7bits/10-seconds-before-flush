@@ -74,18 +74,20 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         if (me.input.isKeyPressed('shoot'))
         {
-              var offsetX;
-              var offsetY = 50;
+              if (!this.sliding) {
+                  var offsetX;
+                  var offsetY = 50;
 
-              if (this.currentShootSide == 'left') {
-                offsetX = 0;
-              } else {
-                offsetX = 70;
+                  if (this.currentShootSide == 'left') {
+                    offsetX = 0;
+                  } else {
+                    offsetX = 70;
+                  }
+
+                  shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
+                  me.game.add(shot, this.z);
+                  me.game.sort();
               }
-
-              shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
-              me.game.add(shot, this.z);
-              me.game.sort();
         }
         if (me.input.isKeyPressed('down'))
         {   
