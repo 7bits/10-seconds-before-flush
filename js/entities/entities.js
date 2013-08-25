@@ -22,6 +22,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.velocityStep = this.maxVel.x * 0.1;
         this.timerPenaltyRate = -10;
         this.timerBonus = 10;
+        this.currentShootSide = 'left'
 
         this.renderable.addAnimation("stand", [0,0]);
         this.renderable.addAnimation("slide", [0,0]);
@@ -42,6 +43,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
+            this.currentShootSide = 'right'
         }
         else if (me.input.isKeyPressed('right'))
         {
@@ -49,6 +51,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
+            this.currentShootSide = 'left'
         }
         else
         {
@@ -69,7 +72,16 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         if (me.input.isKeyPressed('shoot'))
         {
-              shot = new bullet(this.pos.x + 100, this.pos.y + 30, this.vel, { image: 'bullet', spritewidth: 32 });
+              var offsetX;
+              var offsetY = 50;
+
+              if (this.currentShootSide == 'left') {
+                offsetX = 0;
+              } else {
+                offsetX = 70;
+              }
+
+              shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
               me.game.add(shot, this.z);
               me.game.sort();
         }
