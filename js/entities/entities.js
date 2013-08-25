@@ -25,7 +25,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.currentShootSide = 'left'
 
         this.renderable.addAnimation("stand", [0,0]);
-        this.renderable.addAnimation("slide", [0,0]);
+        this.renderable.addAnimation("slide", [1,1]);
+
+        this.renderable.setCurrentAnimation("stand");
 
         this.isEnemyCollision = false;
         // set the display to follow our position on both axis
@@ -72,18 +74,20 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         if (me.input.isKeyPressed('shoot'))
         {
-              var offsetX;
-              var offsetY = 50;
+              if (!this.sliding) {
+                  var offsetX;
+                  var offsetY = 50;
 
-              if (this.currentShootSide == 'left') {
-                offsetX = 0;
-              } else {
-                offsetX = 70;
+                  if (this.currentShootSide == 'left') {
+                    offsetX = 0;
+                  } else {
+                    offsetX = 70;
+                  }
+
+                  shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
+                  me.game.add(shot, this.z);
+                  me.game.sort();
               }
-
-              shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
-              me.game.add(shot, this.z);
-              me.game.sort();
         }
         if (me.input.isKeyPressed('down'))
         {   
@@ -213,12 +217,25 @@ game.LevelInfoObject = me.HUD_Item.extend({
         // create a font
         this.font = new me.BitmapFont("32x32_font", 32);
         this.font.set("left");
-
-        this.value = 100;
     },
 
     draw: function(context, x, y) {
         this.font.draw(context, "LEVEL:", 850, this.pos.y + y);
         this.font.draw(context, me.levelDirector.getCurrentLevelId(), 900, this.pos.y + y);
+    }
+});
+
+game.GameControlHintObject = me.HUD_Item.extend({
+    init: function(x, y) {
+        // call the parent constructor
+        this.parent(x, y);
+        // create a font
+        this.font = new me.BitmapFont("32x32_font", 32);
+        this.font.set("left");
+    },
+
+    draw: function(context, x, y) {
+        text = "WALK: < >  JUMP: X  SHOOT: SPACE"
+        this.font.draw(context, text, 50, 600);
     }
 });
