@@ -1,5 +1,6 @@
 var timer;
 var titleScreenTimeout;
+var lives = 3;
 
 game.PlayScreen = me.ScreenObject.extend({
 
@@ -23,19 +24,24 @@ game.PlayScreen = me.ScreenObject.extend({
             } else {
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
-                //player.die();
-                me.state.set(me.state.FLUSH, new game.FlushScreen());
-                me.state.change(me.state.FLUSH);
+                if (lives < 1) {
+                  me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
+                  me.state.change(me.state.GAME_OVER);
+                } else {
+                  lives -= 1;
+                  me.state.set(me.state.FLUSH, new game.FlushScreen());
+                  me.state.change(me.state.FLUSH);
 
-                var titleScreenTimeout;
-                document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
-                document.getElementById('title-screen').style["visibility"] = "visible";
-                document.getElementById('screen').style["visibility"] = "hidden";
-                clearTimeout(titleScreenTimeout);
-                titleScreenTimeout = setTimeout(function() {
-                  document.getElementById('screen').style["visibility"] = "visible";
-                  document.getElementById('title-screen').style["visibility"] = "hidden";
-                }, 3000);
+                  var titleScreenTimeout;
+                  document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
+                  document.getElementById('title-screen').style["visibility"] = "visible";
+                  document.getElementById('screen').style["visibility"] = "hidden";
+                  clearTimeout(titleScreenTimeout);
+                  titleScreenTimeout = setTimeout(function() {
+                    document.getElementById('screen').style["visibility"] = "visible";
+                    document.getElementById('title-screen').style["visibility"] = "hidden";
+                  }, 3000);
+                }
             }
         }, 100);
       }
@@ -45,7 +51,11 @@ game.PlayScreen = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent: function() {	
-        me.levelDirector.loadLevel("level1");
+        if (me.levelDirector.getCurrentLevelId() == "level0") {
+          me.levelDirector.loadLevel("level1");
+        } else {
+          me.levelDirector.loadLevel(me.levelDirector.getCurrentLevelId());
+        }
 
         // add a default HUD to the game mngr
         me.game.addHUD(50, 50, 1280, 720);

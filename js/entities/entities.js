@@ -23,6 +23,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.timerPenaltyRate = -20;
         this.timerBonus = 10;
         this.currentShootSide = 'left'
+        this.lives = 3;
 
         this.renderable.addAnimation("stand", [0,0]);
         this.renderable.addAnimation("slide", [1,1]);
@@ -146,9 +147,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
     },
 
     die: function() {
-        this.alive = false;
-        invisibility = false;
-        speed = false;
+        //this.alive = false;
+        //invisibility = false;
+        //speed = false;
         //me.gamestat.reset();
         //me.levelDirector.reloadLevel();
     },
@@ -220,8 +221,10 @@ game.LevelInfoObject = me.HUD_Item.extend({
     },
 
     draw: function(context, x, y) {
-        this.font.draw(context, "LEVEL:", 850, this.pos.y + y);
-        this.font.draw(context, me.levelDirector.getCurrentLevelId(), 900, this.pos.y + y);
+        this.font.draw(context, "LEVEL:", 450, this.pos.y + y);
+        this.font.draw(context, me.levelDirector.getCurrentLevelId(), 500, this.pos.y + y);
+        this.font.draw(context, "LIVES:", 800, this.pos.y + y);
+        this.font.draw(context, lives, 1000, this.pos.y + y);
     }
 });
 
