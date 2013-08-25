@@ -20,7 +20,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.setVelocity(this.initialVelocity.x, this.initialVelocity.y);
         this.minVel = { x : 3, y : 15 }; 
         this.velocityStep = this.maxVel.x * 0.1;
-        this.timerPenaltyRate = -10;
+        this.timerPenaltyRate = -20;
         this.timerBonus = 10;
         this.currentShootSide = 'left'
 
@@ -119,7 +119,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         var res = me.game.collide(this);
      
         if (res) {
-            if (res.obj.type == me.game.ENEMY_OBJECT) {
+            if ((res.obj.type == me.game.ENEMY1_OBJECT) || (res.obj.type == me.game.ENEMY1_OBJECT)) {
                 if (!this.isEnemyCollision) {
                     this.isEnemyCollision = true;
                     me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
@@ -235,7 +235,7 @@ game.GameControlHintObject = me.HUD_Item.extend({
     },
 
     draw: function(context, x, y) {
-        text = "WALK: < >  JUMP: X  SHOOT: SPACE"
+        text = "WALK: < >  JUMP: X  SQUAT: C  SHOOT: SPACE"
         this.font.draw(context, text, 50, 600);
     }
 });

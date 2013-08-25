@@ -10,7 +10,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
  
-        this.scroller = "LET'S TRY TO MAKE A WORLD SHIT!";
+        this.scroller = "WALK: < >  JUMP: X  SQUAT: C  SHOOT: SPACE  LET'S TRY TO MAKE A WORLD SHIT!";
         this.scrollerpos = 600;
     },
  

@@ -23,6 +23,7 @@ game.LevelChangeEntity = me.LevelEntity.extend({
                   document.getElementById('screen').style["visibility"] = "visible";
                   document.getElementById('title-screen').style["visibility"] = "hidden";
                 }, 3000);
+                me.state.set(me.state.WIN, new game.WinScreen());
                 me.state.change(me.state.WIN);
             }
         }

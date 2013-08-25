@@ -24,6 +24,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
                 //player.die();
+                me.state.set(me.state.FLUSH, new game.FlushScreen());
                 me.state.change(me.state.FLUSH);
 
                 var titleScreenTimeout;
@@ -35,7 +36,6 @@ game.PlayScreen = me.ScreenObject.extend({
                   document.getElementById('screen').style["visibility"] = "visible";
                   document.getElementById('title-screen').style["visibility"] = "hidden";
                 }, 3000);
- 
             }
         }, 100);
       }
