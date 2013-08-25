@@ -19,6 +19,7 @@ game.FlushScreen = me.ScreenObject.extend({
         if (this.title == null) {
             // init stuff if not yet done
             this.title = me.loader.getImage("flush_screen");
+
             console.log(this.title);
         }
         if (this.font == null) {
@@ -42,7 +43,7 @@ game.FlushScreen = me.ScreenObject.extend({
  
         // play something
         //me.audio.play("cling");
- 
+
     },
  
     // some callback for the tween objects

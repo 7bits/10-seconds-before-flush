@@ -42,6 +42,14 @@ game.TitleScreen = me.ScreenObject.extend({
         // play something
         //me.audio.play("cling");
  
+        /*var titleScreenTimeout;
+        document.getElementById('title-screen').style["visibility"] = "visible";
+        document.getElementById('title-screen-img').src = "data/img/gui/win_screen.png";
+        clearTimeout(titleScreenTimeout);
+        titleScreenTimeout = setTimeout(function() {
+          document.getElementById('title-screen').style["visibility"] = "hidden";
+        }, 3000);
+        */
     },
  
     // some callback for the tween objects

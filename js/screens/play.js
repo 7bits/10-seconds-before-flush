@@ -1,4 +1,5 @@
 var timer;
+var titleScreenTimeout;
 
 game.PlayScreen = me.ScreenObject.extend({
 
@@ -21,7 +22,16 @@ game.PlayScreen = me.ScreenObject.extend({
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
                 //player.die();
-                me.state.change(me.state.MENU);
+                me.state.change(me.state.FLUSH);
+
+                var titleScreenTimeout;
+                document.getElementById('title-screen').style["visibility"] = "visible";
+                document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
+                clearTimeout(titleScreenTimeout);
+                titleScreenTimeout = setTimeout(function() {
+                  document.getElementById('title-screen').style["visibility"] = "hidden";
+                }, 3000);
+ 
             }
         }, 100);
       }
@@ -39,6 +49,10 @@ game.PlayScreen = me.ScreenObject.extend({
         this.setTimer();
         me.game.onLevelLoaded = this.setTimer.bind(this);
 
+        //clearTimeout(titleScreenTimeout);
+        //titleScreenTimeout = setTimeout(function() {
+        //document.getElementById('title-screen').style["display"] = "none";
+        //}, 3000);
         // make sure everything is in the right order
         me.game.sort();
     },

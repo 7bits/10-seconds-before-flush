@@ -14,6 +14,13 @@ game.LevelChangeEntity = me.LevelEntity.extend({
             if (nextLevel != "null") {
                 this.goTo(nextLevel);
             } else {
+                var titleScreenTimeout;
+                document.getElementById('title-screen').style["visibility"] = "visible";
+                document.getElementById('title-screen-img').src = "data/img/gui/finish11-gif.gif";
+                clearTimeout(titleScreenTimeout);
+                titleScreenTimeout = setTimeout(function() {
+                  document.getElementById('title-screen').style["visibility"] = "hidden";
+                }, 3000);
                 me.state.change(me.state.WIN);
             }
         }
