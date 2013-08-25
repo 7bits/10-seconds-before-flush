@@ -25,7 +25,7 @@ var game = {
         // Load the resources.
         me.loader.preload(game.resources);
 
-        me.debug.renderHitBox = true;
+        // me.debug.renderHitBox = true;
 
         // Initialize melonJS and display a loading screen.
         me.state.change(me.state.LOADING);
