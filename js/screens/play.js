@@ -57,6 +57,7 @@ game.PlayScreen = me.ScreenObject.extend({
           me.levelDirector.loadLevel(me.levelDirector.getCurrentLevelId());
         }
 
+        me.audio.playTrack("background");
         // add a default HUD to the game mngr
         me.game.addHUD(50, 50, 1280, 720);
 
@@ -77,6 +78,7 @@ game.PlayScreen = me.ScreenObject.extend({
     onDestroyEvent: function() {
         // remove the HUD
         me.game.disableHUD();
+        me.audio.stopTrack();
         // clear timer
         clearInterval(timer);
     }

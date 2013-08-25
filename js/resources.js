@@ -51,9 +51,13 @@ game.resources = [
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
 	 */	
+	  {name: "background", type: "audio", src: "data/bgm/", channel : 1},
 	
 	/* Sound effects. 
 	 * @example
 	 * {name: "example_sfx", type: "audio", src: "data/sfx/", channel : 2}
 	 */
+	  {name: "eat", type: "audio", src: "data/sfx/", channel : 2},
+	  {name: "shoot", type: "audio", src: "data/sfx/", channel : 2},
+	  {name: "flush", type: "audio", src: "data/sfx/", channel : 2}
 ];

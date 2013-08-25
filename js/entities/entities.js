@@ -88,6 +88,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                   shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
                   me.game.add(shot, this.z);
                   me.game.sort();
+                  me.audio.play("shoot");
               }
         }
         if (me.input.isKeyPressed('down'))
@@ -129,6 +130,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
             if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
                 me.game.HUD.updateItemValue("timer", this.timerBonus);
+                me.audio.play("eat");
             }
         } else {
             this.isEnemyCollision = false;
