@@ -269,9 +269,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
                   this.floatTop = false;
                 }
             }
-            // make it walk
             this.flipX(this.floatLeft);
-            this.flipY(this.floatTop);
 
             this.vel.x += (this.floatLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
             this.vel.y += (this.floatTop) ? -this.accel.y * me.timer.tick : this.accel.y * me.timer.tick;
