@@ -25,7 +25,7 @@ var game = {
         // Load the resources.
         me.loader.preload(game.resources);
 
-        me.debug.renderHitBox = true;
+        // me.debug.renderHitBox = true;
 
         // Initialize melonJS and display a loading screen.
         me.state.change(me.state.LOADING);
@@ -41,7 +41,7 @@ var game = {
        me.state.set(me.state.PLAY, new game.PlayScreen());
 
        // Game over screen - a full loosing
-       //me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
+       me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
 
        // add our player entity in the entity pool
        me.entityPool.add("mainPlayer", game.PlayerEntity);
