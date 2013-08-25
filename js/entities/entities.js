@@ -67,6 +67,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 this.jumping = true;
             }
         }
+        if (me.input.isKeyPressed('shoot'))
+        {
+              shot = new bullet(this.pos.x + 100, this.pos.y + 30, this.vel, { image: 'spinning_coin_gold', spritewidth: 32 });
+              me.game.add(shot, this.z);
+              me.game.sort();
+        }
         if (me.input.isKeyPressed('down'))
         {   
             if (!this.sliding && !this.jumping && !this.falling) {
