@@ -15,10 +15,12 @@ game.LevelChangeEntity = me.LevelEntity.extend({
                 this.goTo(nextLevel);
             } else {
                 var titleScreenTimeout;
-                document.getElementById('title-screen').style["visibility"] = "visible";
                 document.getElementById('title-screen-img').src = "data/img/gui/finish11-gif.gif";
+                document.getElementById('title-screen').style["visibility"] = "visible";
+                document.getElementById('screen').style["visibility"] = "hidden";
                 clearTimeout(titleScreenTimeout);
                 titleScreenTimeout = setTimeout(function() {
+                  document.getElementById('screen').style["visibility"] = "visible";
                   document.getElementById('title-screen').style["visibility"] = "hidden";
                 }, 3000);
                 me.state.change(me.state.WIN);

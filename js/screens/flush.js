@@ -18,7 +18,7 @@ game.FlushScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("flush_screen");
+            this.title = me.loader.getImage("title_screen");
             console.log(this.title);
         }
         if (this.font == null) {
