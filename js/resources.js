@@ -59,5 +59,7 @@ game.resources = [
 	 */
 	  {name: "eat", type: "audio", src: "data/sfx/", channel : 2},
 	  {name: "shoot", type: "audio", src: "data/sfx/", channel : 2},
-	  {name: "flush", type: "audio", src: "data/sfx/", channel : 2}
+	  {name: "flush", type: "audio", src: "data/sfx/", channel : 2},
+	  {name: "enemy", type: "audio", src: "data/sfx/", channel : 2},
+	  {name: "win", type: "audio", src: "data/sfx/", channel : 2}
 ];

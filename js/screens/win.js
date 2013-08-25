@@ -40,7 +40,7 @@ game.WinScreen = me.ScreenObject.extend({
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
  
         // play something
-        //me.audio.play("cling");
+        me.audio.play("win");
  
     },
  

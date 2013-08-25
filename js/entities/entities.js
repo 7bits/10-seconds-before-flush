@@ -125,6 +125,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 if (!this.isEnemyCollision) {
                     this.isEnemyCollision = true;
                     me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
+                    me.audio.play("enemy");
                 }
             }
 
