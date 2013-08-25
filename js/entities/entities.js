@@ -7,15 +7,24 @@ game.PlayerEntity = me.ObjectEntity.extend({
     constructor
     ------ */
     init: function(x, y, settings) {
+        this.spriteSizes = {
+          stand : { width : 96, height : 96},
+          slide : { width : 96, height : 48 }  
+        }
         // call the constructor
         this.parent(x, y, settings);
  
         // set the default horizontal & vertical speed (accel vector)
-        this.setVelocity(7, 20);
-        this.minVel = { x : 3, y : 15}; 
+        this.initialVelocity = { x : 7, y : 20 };
+        this.setVelocity(this.initialVelocity.x, this.initialVelocity.y);
+        this.minVel = { x : 3, y : 15 }; 
         this.velocityStep = this.maxVel.x * 0.1;
         this.timerPenaltyRate = -1;
         this.timerBonus = 10;
+
+        this.renderable.addAnimation("stand", [0,0]);
+        this.renderable.addAnimation("slide", [0,0]);
+
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
     },
@@ -50,15 +59,38 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 // set current vel to the maximum defined value
                 // gravity will then do the rest
                 this.vel.y = -this.maxVel.y * me.timer.tick;
+                // disable the sliding flag
+                this.sliding = false;
                 // set the jumping flag
                 this.jumping = true;
             }
         }
-     
+        if (me.input.isKeyPressed('down'))
+        {   
+            if (!this.sliding && !this.jumping && !this.falling) {
+                this.slide();
+            }
+        } else {
+            this.sliding = false;
+        }
      
         // check & update player movement
         this.updateMovement();
-     
+
+        // Set stand animation if needed
+        if (!this.renderable.isCurrentAnimation("stand") && !this.sliding && !this.falling) {
+            this.renderable.setCurrentAnimation("stand");
+        }
+
+        // Update player rectangle sizes if needed
+        if (!this.sliding) {
+            this.updateColRect(10, this.spriteSizes.stand.width - 20, 0, this.spriteSizes.stand.height);
+        }
+        if (this.sliding) {
+            this.updateColRect(0, this.spriteSizes.slide.width, this.spriteSizes.stand.height - this.spriteSizes.slide.height, this.spriteSizes.slide.height);
+        }
+             
+
         // check for collision
         var res = me.game.collide(this);
      
@@ -96,7 +128,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
         speed = false;
         me.gamestat.reset();
         me.levelDirector.reloadLevel();
-    }
+    },
+
+    slide: function() {
+        this.sliding = true;
+        this.renderable.setCurrentAnimation("slide");
+    },
      
 });
 
