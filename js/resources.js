@@ -12,7 +12,7 @@ game.resources = [
 
 	{name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
 	
-    {name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
+    //{name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
     {name: "monstr", type:"image", src: "data/img/sprite/monstr_96px.png"},
     {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
 	/* Atlases 
@@ -25,6 +25,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
+	{name: "level0", type: "tmx", src: "data/map/level0.tmx"},
 	{name: "level1", type: "tmx", src: "data/map/level1.tmx"},
 	{name: "level2", type: "tmx", src: "data/map/level2.tmx"},
 	{name: "level3", type: "tmx", src: "data/map/level3.tmx"},

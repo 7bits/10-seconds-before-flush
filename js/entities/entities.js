@@ -8,23 +8,25 @@ game.PlayerEntity = me.ObjectEntity.extend({
     ------ */
     init: function(x, y, settings) {
         this.spriteSizes = {
-          stand : { width : 96, height : 96},
+          stand : { width : 96, height : 96 },
           slide : { width : 96, height : 48 }  
         }
         // call the constructor
         this.parent(x, y, settings);
- 
+        settings.image = "monstr";
+
         // set the default horizontal & vertical speed (accel vector)
         this.initialVelocity = { x : 7, y : 20 };
         this.setVelocity(this.initialVelocity.x, this.initialVelocity.y);
         this.minVel = { x : 3, y : 15 }; 
         this.velocityStep = this.maxVel.x * 0.1;
-        this.timerPenaltyRate = -1;
+        this.timerPenaltyRate = -10;
         this.timerBonus = 10;
 
         this.renderable.addAnimation("stand", [0,0]);
         this.renderable.addAnimation("slide", [0,0]);
 
+        this.isEnemyCollision = false;
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
     },
@@ -96,18 +98,17 @@ game.PlayerEntity = me.ObjectEntity.extend({
      
         if (res) {
             if (res.obj.type == me.game.ENEMY_OBJECT) {
-                this.renderable.flicker(45);
-                // let's slowdown the player
-                //if (this.maxVel.x > this.minVel.x) {
-                //  this.maxVel.x -= this.velocityStep;
-                //}
-                me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
+                if (!this.isEnemyCollision) {
+                    this.isEnemyCollision = true;
+                    me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
+                }
             }
 
             if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
-                //this.maxVel.x += this.velocityStep * 3;
                 me.game.HUD.updateItemValue("timer", this.timerBonus);
             }
+        } else {
+            this.isEnemyCollision = false;
         }
 
         // update animation if necessary
