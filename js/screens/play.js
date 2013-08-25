@@ -4,9 +4,10 @@ game.PlayScreen = me.ScreenObject.extend({
 
     // timer for flush
     setTimer: function() {
-        clearInterval(timer);
+      clearInterval(timer);
 
-        // reload HUD timer
+      // reload HUD timer
+      if (me.game.HUD != null) {
         me.game.HUD.removeItem("timer");
         me.game.HUD.addItem("timer", new game.TimerObject(150, 10));
 
@@ -22,6 +23,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 player.die();
             }
         }, 100);
+      }
     },
 
     /**	
