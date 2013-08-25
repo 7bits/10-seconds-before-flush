@@ -15,7 +15,7 @@ game.resources = [
 	{name: "area01_level_tiles", type:"image", src: "data/img/map/tiles.png"},
 	
     //{name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
-    {name: "monstr", type:"image", src: "data/img/sprite/monstr_96px.png"},
+    {name: "monstr", type:"image", src: "data/img/sprite/monster.png"},
     {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
 
 	{name: "main_background", type:"image",	src: "data/img/main_background.png"},
