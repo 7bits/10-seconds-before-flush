@@ -14,6 +14,7 @@ game.LevelChangeEntity = me.LevelEntity.extend({
             if (nextLevel != "null") {
                 this.goTo(nextLevel);
             } else {
+                me.state.set(me.state.WIN, new game.WinScreen());
                 me.state.change(me.state.WIN);
             }
         }
