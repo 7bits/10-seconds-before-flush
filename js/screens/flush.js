@@ -18,7 +18,8 @@ game.FlushScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("flush_screen");
+            this.title = me.loader.getImage("title_screen");
+            console.log(this.title);
         }
         if (this.font == null) {
             // font to display the menu items
@@ -41,7 +42,7 @@ game.FlushScreen = me.ScreenObject.extend({
  
         // play something
         //me.audio.play("cling");
- 
+
     },
  
     // some callback for the tween objects
