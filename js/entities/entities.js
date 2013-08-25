@@ -144,8 +144,8 @@ game.PooEntity = me.CollectableEntity.extend({
     // extending the init function is not mandatory
     // unless you need to add some extra initialization
     init: function(x, y, settings) {
-        settings.image = "spinning_coin_gold";
-        settings.spritewidth = 32;
+        settings.image = "poo";
+        settings.spritewidth = 44;
 
         // call the parent constructor
         this.parent(x, y, settings);
@@ -170,9 +170,8 @@ Flower Entity
 ------------------------ */
 game.FlowerEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
-        // define this here instead of tiled
-        settings.image = "wheelie_right";
-        settings.spritewidth = 64;
+        settings.image = "flower";
+        settings.spritewidth = 55;
  
         // call the parent constructor
         this.parent(x, y, settings);
@@ -205,10 +204,9 @@ Butterfly Entity
 ------------------------ */
 game.ButterflyEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
-        // define this here instead of tiled
-        settings.image = "spinning_coin_gold";
-        settings.spritewidth = 32;
-        settings.spriteheight = 32;
+        settings.image = "butterfly";
+        settings.spritewidth = 55;
+        settings.spriteheight = 48;
  
         // call the parent constructor
         this.parent(x, y, settings);
@@ -226,7 +224,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
         this.floatTop = false;
  
         // walking & jumping speed
-        this.setVelocity(4, 6);
+        this.setVelocity(2, 3);
  
         // make it collidable
         this.collidable = true;
@@ -271,9 +269,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
                   this.floatTop = false;
                 }
             }
-            // make it walk
             this.flipX(this.floatLeft);
-            this.flipY(this.floatTop);
 
             this.vel.x += (this.floatLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
             this.vel.y += (this.floatTop) ? -this.accel.y * me.timer.tick : this.accel.y * me.timer.tick;
