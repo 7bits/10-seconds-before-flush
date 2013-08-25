@@ -19,7 +19,6 @@ game.TitleScreen = me.ScreenObject.extend({
         if (this.title == null) {
             // init stuff if not yet done
             this.title = me.loader.getImage("title_screen");
-            console.log(this.title);
         }
         if (this.font == null) {
             // font to display the menu items

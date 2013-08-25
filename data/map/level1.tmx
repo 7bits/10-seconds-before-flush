@@ -40,9 +40,8 @@
     <property name="to" value="level2"/>
    </properties>
   </object>
-  <object name="PooEntity" x="205" y="389" width="47" height="22"/>
+  <object name="PooEntity" x="205" y="392" width="47" height="22"/>
   <object name="PooEntity" x="473" y="361" width="47" height="22"/>
-  <object name="PooEntity" x="1198" y="392" width="47" height="22"/>
   <object name="PooEntity" x="681" y="169" width="47" height="22"/>
   <object name="PooEntity" x="1017" y="360" width="47" height="22"/>
  </objectgroup>

@@ -9,13 +9,15 @@ game.PlayerEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // call the constructor
         this.parent(x, y, settings);
- 
+        settings.image = "monstr";
+
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(7, 20);
         this.minVel = { x : 3, y : 15}; 
         this.velocityStep = this.maxVel.x * 0.1;
-        this.timerPenaltyRate = -1;
+        this.timerPenaltyRate = -10;
         this.timerBonus = 10;
+        this.isEnemyCollision = false;
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
     },
@@ -64,18 +66,17 @@ game.PlayerEntity = me.ObjectEntity.extend({
      
         if (res) {
             if (res.obj.type == me.game.ENEMY_OBJECT) {
-                this.renderable.flicker(45);
-                // let's slowdown the player
-                //if (this.maxVel.x > this.minVel.x) {
-                //  this.maxVel.x -= this.velocityStep;
-                //}
-                me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
+                if (!this.isEnemyCollision) {
+                    this.isEnemyCollision = true;
+                    me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
+                }
             }
 
             if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
-                //this.maxVel.x += this.velocityStep * 3;
                 me.game.HUD.updateItemValue("timer", this.timerBonus);
             }
+        } else {
+            this.isEnemyCollision = false;
         }
 
         // update animation if necessary
