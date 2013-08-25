@@ -25,7 +25,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.currentShootSide = 'left'
 
         this.renderable.addAnimation("stand", [0,0]);
-        this.renderable.addAnimation("slide", [0,0]);
+        this.renderable.addAnimation("slide", [1,1]);
+
+        this.renderable.setCurrentAnimation("stand");
 
         this.isEnemyCollision = false;
         // set the display to follow our position on both axis
