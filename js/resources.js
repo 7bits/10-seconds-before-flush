@@ -33,9 +33,13 @@ game.resources = [
 	{name: "level3", type: "tmx", src: "data/map/level3.tmx"},
 
         // the spinning coin spritesheet
-    {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
+        {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
+        {name: "flower",  type:"image", src: "data/img/sprite/flower.png"},
+        {name: "butterfly",  type:"image", src: "data/img/sprite/butterfly.png"},
+        {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
+
         // our enemty entity
-    {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
+        {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
 
         // game font
         {name: "32x32_font",          type:"image", src: "data/img/font/32x32_font.png"},
