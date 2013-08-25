@@ -40,7 +40,12 @@ var game = {
        // set the "Play/Ingame" Screen Object
        me.state.set(me.state.PLAY, new game.PlayScreen());
          
+       // Win screen
        me.state.set(me.state.WIN, new game.WinScreen());
+       // Flush screen - a level loosing
+       me.state.set(me.state.FLUSH, new game.FlushScreen());
+       // Game over screen - a full loosing
+       me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
 
        // add our player entity in the entity pool
        me.entityPool.add("mainPlayer", game.PlayerEntity);

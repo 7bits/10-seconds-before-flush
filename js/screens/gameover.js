@@ -1,4 +1,4 @@
-game.TitleScreen = me.ScreenObject.extend({
+game.GameOverScreen = me.ScreenObject.extend({
     // constructor
     init: function() {
         this.parent(true);
@@ -10,7 +10,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
  
-        this.scroller = "LET'S TRY TO MAKE A WORLD SHIT!";
+        this.scroller = "YOU LOSE! A BEAUTY HAS WIN!";
         this.scrollerpos = 600;
     },
  
@@ -18,7 +18,7 @@ game.TitleScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("title_screen");
+            this.title = me.loader.getImage("gameover_screen");
         }
         if (this.font == null) {
             // font to display the menu items

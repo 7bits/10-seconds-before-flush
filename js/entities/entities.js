@@ -96,7 +96,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         invisibility = false;
         speed = false;
         me.gamestat.reset();
-        me.levelDirector.reloadLevel();
+        //me.levelDirector.reloadLevel();
     }
      
 });

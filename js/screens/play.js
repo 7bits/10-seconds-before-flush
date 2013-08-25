@@ -21,6 +21,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
                 player.die();
+                me.state.change(me.state.FLUSH);
             }
         }, 100);
       }
