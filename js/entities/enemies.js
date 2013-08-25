@@ -17,7 +17,7 @@ game.FlowerEntity = me.ObjectEntity.extend({
         // make it collidable
         this.collidable = true;
         // make it a enemy object
-        this.type = me.game.ENEMY_OBJECT;
+        this.type = me.game.ENEMY1_OBJECT;
  
     },
  
@@ -63,7 +63,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
         // make it collidable
         this.collidable = true;
         // make it a enemy object
-        this.type = me.game.ENEMY_OBJECT;
+        this.type = me.game.ENEMY2_OBJECT;
  
     },
  
