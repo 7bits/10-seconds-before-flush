@@ -12,11 +12,14 @@ game.resources = [
 	{name: "flush_screen",    type:"image",	src: "data/img/gui/flush_screen.gif"},
 	{name: "gameover_screen", type:"image",	src: "data/img/gui/gameover_screen.png"},
 
-	{name: "area01_level_tiles", type:"image", src: "data/img/map/area01_level_tiles.png"},
+	{name: "area01_level_tiles", type:"image", src: "data/img/map/tiles.png"},
 	
     //{name: "gripe_run_right", type:"image", src: "data/img/sprite/gripe_run_right.png"},
     {name: "monstr", type:"image", src: "data/img/sprite/monstr_96px.png"},
     {name: "metatiles32x32", type:"image", src: "data/img/map/metatiles32x32.png"},
+
+	{name: "main_background", type:"image",	src: "data/img/main_background.png"},
+
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
