@@ -37,6 +37,7 @@ game.resources = [
         {name: "flower",  type:"image", src: "data/img/sprite/flower.png"},
         {name: "butterfly",  type:"image", src: "data/img/sprite/butterfly.png"},
         {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
+        {name: "bullet",  type:"image", src: "data/img/sprite/bullet.png"},
 
         // our enemty entity
         {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},

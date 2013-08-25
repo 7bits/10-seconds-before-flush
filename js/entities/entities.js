@@ -69,7 +69,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         if (me.input.isKeyPressed('shoot'))
         {
-              shot = new bullet(this.pos.x + 100, this.pos.y + 30, this.vel, { image: 'spinning_coin_gold', spritewidth: 32 });
+              shot = new bullet(this.pos.x + 100, this.pos.y + 30, this.vel, { image: 'bullet', spritewidth: 32 });
               me.game.add(shot, this.z);
               me.game.sort();
         }
