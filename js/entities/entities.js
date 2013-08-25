@@ -205,8 +205,8 @@ Butterfly Entity
 game.ButterflyEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         settings.image = "butterfly";
-        settings.spritewidth = 32;
-        settings.spriteheight = 32;
+        settings.spritewidth = 55;
+        settings.spriteheight = 48;
  
         // call the parent constructor
         this.parent(x, y, settings);
@@ -224,7 +224,7 @@ game.ButterflyEntity = me.ObjectEntity.extend({
         this.floatTop = false;
  
         // walking & jumping speed
-        this.setVelocity(4, 6);
+        this.setVelocity(2, 3);
  
         // make it collidable
         this.collidable = true;
