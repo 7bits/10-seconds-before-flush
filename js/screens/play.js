@@ -10,6 +10,7 @@ game.PlayScreen = me.ScreenObject.extend({
       if (me.game.HUD != null) {
         me.game.HUD.removeItem("timer");
         me.game.HUD.addItem("timer", new game.TimerObject(150, 10));
+        me.game.HUD.addItem("scope", new game.LevelInfoObject(150, 10));
 
         var timerStep = 1;
         timer = setInterval(function() {
@@ -34,7 +35,7 @@ game.PlayScreen = me.ScreenObject.extend({
         me.levelDirector.loadLevel("level1");
 
         // add a default HUD to the game mngr
-        me.game.addHUD(50, 50, 200, 50);
+        me.game.addHUD(50, 50, 1280, 50);
 
         this.setTimer();
         me.game.onLevelLoaded = this.setTimer.bind(this);

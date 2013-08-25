@@ -205,3 +205,20 @@ game.TimerObject = me.HUD_Item.extend({
         this.font.draw(context, humanReadable, this.pos.x + x, this.pos.y + y);
     }
 });
+
+game.LevelInfoObject = me.HUD_Item.extend({
+    init: function(x, y) {
+        // call the parent constructor
+        this.parent(x, y);
+        // create a font
+        this.font = new me.BitmapFont("32x32_font", 32);
+        this.font.set("left");
+
+        this.value = 100;
+    },
+
+    draw: function(context, x, y) {
+        this.font.draw(context, "LEVEL:", 850, this.pos.y + y);
+        this.font.draw(context, me.levelDirector.getCurrentLevelId(), 900, this.pos.y + y);
+    }
+});
