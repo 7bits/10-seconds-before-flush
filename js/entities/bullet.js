@@ -10,8 +10,8 @@ var bullet = me.ObjectEntity.extend({
     update: function () {
 
         if (!this.visible){
-          // remove myself if not on the screen anymore
-                me.game.remove(this);
+            // remove myself if not on the screen anymore
+            me.game.remove(this);
         }
 
         // speed up
@@ -26,20 +26,6 @@ var bullet = me.ObjectEntity.extend({
         var res = me.game.collide(this);
         if (res) {
             if (res.obj.type == me.game.ENEMY_OBJECT) {
-                // alert('collision');
-                //log points and play sound
-                // console.log("bullet hit enemy");
-                // me.game.HUD.updateItemValue("score", 10);
-                // me.audio.play("points");
-
-                //explosion
-                // console.log("explosion");
-                // bang = new explosionEntity(this.pos.x, this.pos.y, { image: 'explosion', spritewidth: 64, spriteheight: 64 });
-                // me.game.add(bang, this.z);
-                // me.game.sort();
-
-                //remove object
-                // me.game.remove(this);
                 me.game.remove(res.obj);
                 me.game.remove(this);
             } else if (res.obj.type !== 0) {
