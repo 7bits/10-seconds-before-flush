@@ -241,7 +241,7 @@ game.GameControlHintObject = me.HUD_Item.extend({
     },
 
     draw: function(context, x, y) {
-        text = "WALK: < >  JUMP: X  SQUAT: C  SHOOT: SPACE"
-        this.font.draw(context, text, 50, 600);
+        text = "WALK: < > JUMP/SQUAT: X/C SHOOT: SPACE"
+        this.font.draw(context, text, 0, 600);
     }
 });

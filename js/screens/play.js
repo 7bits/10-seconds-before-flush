@@ -1,6 +1,7 @@
 var timer;
 var titleScreenTimeout;
-var lives = 3;
+var initialLives = 3;
+var lives = initialLives;
 
 game.PlayScreen = me.ScreenObject.extend({
 
@@ -24,9 +25,11 @@ game.PlayScreen = me.ScreenObject.extend({
             } else {
                 clearInterval(timer);
                 var player = me.game.getEntityByName("mainPlayer")[0]
-                if (lives < 1) {
+                if (lives <= 1) {
                   me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
                   me.state.change(me.state.GAME_OVER);
+                  lives = initialLives;
+                  me.levelDirector.loadLevel("level1");
                 } else {
                   lives -= 1;
                   me.state.set(me.state.FLUSH, new game.FlushScreen());

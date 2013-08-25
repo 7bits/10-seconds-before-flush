@@ -25,6 +25,8 @@ game.LevelChangeEntity = me.LevelEntity.extend({
                 }, 3000);
                 me.state.set(me.state.WIN, new game.WinScreen());
                 me.state.change(me.state.WIN);
+                lives = initialLives;
+                me.levelDirector.loadLevel("level1");
             }
         }
     }
