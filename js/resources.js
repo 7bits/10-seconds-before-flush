@@ -41,7 +41,7 @@ game.resources = [
     {name: "flower_2",  type:"image", src: "data/img/sprite/flower_2.png"},
     {name: "butterfly_1",  type:"image", src: "data/img/sprite/butterfly_1.png"},
     {name: "butterfly_2",  type:"image", src: "data/img/sprite/butterfly_2.png"},
-    {name: "butterfly_3",  type:"image", src: "data/img/sprite/butterfly_2.png"},
+    {name: "butterfly_3",  type:"image", src: "data/img/sprite/butterfly_3.png"},
     {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
     {name: "bullet",  type:"image", src: "data/img/sprite/bullet.png"},
     {name: "-1",  type:"image", src: "data/img/sprite/-1.png"},
