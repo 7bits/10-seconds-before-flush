@@ -36,10 +36,11 @@ game.PlayScreen = me.ScreenObject.extend({
                   me.state.change(me.state.FLUSH);
 
                   var titleScreenTimeout;
-                  document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
+                  document.getElementById('title-screen-img').src = "";
+                  document.getElementById('screen').style["visibility"] = "hidden";
                   setTimeout(function() {
+                    document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
                     document.getElementById('title-screen').style["visibility"] = "visible";
-                    document.getElementById('screen').style["visibility"] = "hidden";
                   }, 10);
                   clearTimeout(titleScreenTimeout);
                   titleScreenTimeout = setTimeout(function() {
