@@ -24,6 +24,7 @@ game.LevelChangeEntity = me.LevelEntity.extend({
                 titleScreenTimeout = setTimeout(function() {
                   document.getElementById('screen').style["visibility"] = "visible";
                   document.getElementById('title-screen').style["visibility"] = "hidden";
+                  document.getElementById('title-screen-img').src = "";
                   document.onkeypress = function() {
                       me.state.change(me.state.MENU);
                   }

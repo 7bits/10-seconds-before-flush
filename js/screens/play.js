@@ -46,6 +46,7 @@ game.PlayScreen = me.ScreenObject.extend({
                   titleScreenTimeout = setTimeout(function() {
                     document.getElementById('screen').style["visibility"] = "visible";
                     document.getElementById('title-screen').style["visibility"] = "hidden";
+                    document.getElementById('title-screen-img').src = "";
                     me.audio.playTrack("background");
                   }, 2300);
                 }
