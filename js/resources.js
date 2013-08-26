@@ -41,6 +41,12 @@ game.resources = [
         {name: "butterfly",  type:"image", src: "data/img/sprite/butterfly.png"},
         {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
         {name: "bullet",  type:"image", src: "data/img/sprite/bullet.png"},
+        {name: "-1",  type:"image", src: "data/img/sprite/-1.png"},
+        {name: "-2",  type:"image", src: "data/img/sprite/-2.png"},
+        {name: "-3",  type:"image", src: "data/img/sprite/-3.png"},
+        {name: "+1",  type:"image", src: "data/img/sprite/+1.png"},
+        {name: "+2",  type:"image", src: "data/img/sprite/+2.png"},
+        {name: "+3",  type:"image", src: "data/img/sprite/+3.png"},
 
         // our enemty entity
         {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
