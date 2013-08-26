@@ -6,7 +6,6 @@ var Bullet = me.ObjectEntity.extend({
         this.gravity = 0;
         this.initVelocity = playerVelocity;
         this.shootDirection = direction;
-        console.log(this.shootDirection);
     },
 
     update: function () {
