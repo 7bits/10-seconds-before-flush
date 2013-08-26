@@ -40,7 +40,8 @@ game.TitleScreen = me.ScreenObject.extend({
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
  
         // play something
-        //me.audio.play("cling");
+
+        me.audio.playTrack("background");
  
         /*var titleScreenTimeout;
         document.getElementById('title-screen').style["visibility"] = "visible";

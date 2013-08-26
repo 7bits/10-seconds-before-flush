@@ -40,6 +40,7 @@ game.FlushScreen = me.ScreenObject.extend({
         // enable the keyboard
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
  
+        me.audio.stopTrack();
         // play something
         me.audio.play("flush");
     },
