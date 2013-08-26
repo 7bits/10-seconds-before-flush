@@ -56,9 +56,6 @@ game.WinScreen = me.ScreenObject.extend({
     // update function
     update: function() {
         lives = initialLives;
-        document.onkeypress = function() {
-            me.state.change(me.state.MENU);
-        }
         return true;
     },
  
