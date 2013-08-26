@@ -121,7 +121,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         var res = me.game.collide(this);
      
         if (res) {
-            if ((res.obj.type == me.game.ENEMY1_OBJECT) || (res.obj.type == me.game.ENEMY1_OBJECT)) {
+            if ((res.obj.type == me.game.ENEMY1_OBJECT) || (res.obj.type == me.game.ENEMY2_OBJECT)) {
                 if (!this.isEnemyCollision) {
                     this.isEnemyCollision = true;
                     me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
