@@ -85,7 +85,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     offsetX = 70;
                   }
 
-                  shot = new bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
+                  shot = new Bullet(this.pos.x + offsetX, this.pos.y + offsetY, this.vel, this.currentShootSide, { image: 'bullet', spritewidth: 32 });
                   me.game.add(shot, this.z);
                   me.game.sort();
                   me.audio.play("shoot");
@@ -126,6 +126,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     this.isEnemyCollision = true;
                     me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
                     me.audio.play("enemy");
+
+                    timeChange = new TimeChange(res.obj.pos.x, res.obj.pos.y, { image: 'bullet', spritewidth: 32 });
+                    me.game.add(timeChange, this.z);
+                    me.game.sort();
                 }
             }
 

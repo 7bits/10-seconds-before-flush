@@ -1,4 +1,4 @@
-var bullet = me.ObjectEntity.extend({
+var Bullet = me.ObjectEntity.extend({
 
     init: function (x, y, playerVelocity, direction, settings) {
         this.parent(x, y, settings);

@@ -1,4 +1,4 @@
-var Score = me.ObjectEntity.extend({
+var TimeChange = me.ObjectEntity.extend({
 
     init: function (x, y, settings) {
         this.parent(x, y, settings);
@@ -9,7 +9,6 @@ var Score = me.ObjectEntity.extend({
 
     update: function () {
 
-        console.log("update");
         if (!this.visible){
             // remove myself if not on the screen anymore
             me.game.remove(this);
