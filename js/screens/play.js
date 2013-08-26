@@ -41,7 +41,7 @@ game.PlayScreen = me.ScreenObject.extend({
                   setTimeout(function() {
                     document.getElementById('title-screen-img').src = "data/img/gui/flush.gif";
                     document.getElementById('title-screen').style["visibility"] = "visible";
-                  }, 10);
+                  }, 50);
                   clearTimeout(titleScreenTimeout);
                   titleScreenTimeout = setTimeout(function() {
                     document.getElementById('screen').style["visibility"] = "visible";
