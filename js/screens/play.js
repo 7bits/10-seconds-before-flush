@@ -43,6 +43,7 @@ game.PlayScreen = me.ScreenObject.extend({
                   titleScreenTimeout = setTimeout(function() {
                     document.getElementById('screen').style["visibility"] = "visible";
                     document.getElementById('title-screen').style["visibility"] = "hidden";
+                    me.audio.playTrack("background");
                   }, 2300);
                 }
             }
@@ -60,7 +61,7 @@ game.PlayScreen = me.ScreenObject.extend({
           me.levelDirector.loadLevel(me.levelDirector.getCurrentLevelId());
         }
 
-        me.audio.playTrack("background");
+        // me.audio.playTrack("background");
         // add a default HUD to the game mngr
         me.game.addHUD(50, 50, 1280, 720);
 
@@ -81,7 +82,7 @@ game.PlayScreen = me.ScreenObject.extend({
     onDestroyEvent: function() {
         // remove the HUD
         me.game.disableHUD();
-        me.audio.stopTrack();
+        // me.audio.stopTrack();
         // clear timer
         clearInterval(timer);
     }
