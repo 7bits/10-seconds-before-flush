@@ -18,7 +18,7 @@ game.WinScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("title_screen");
+            this.title = me.loader.getImage("team_screen");
         }
         if (this.font == null) {
             // font to display the menu items
@@ -37,7 +37,7 @@ game.WinScreen = me.ScreenObject.extend({
         }, 10000).onComplete(this.scrollover.bind(this)).start();
  
         // enable the keyboard
-        me.input.bindKey(me.input.KEY.ENTER, "enter", true);
+        //me.input.bindKey(me.input.KEY.ENTER, "enter", true);
  
         // play something
         me.audio.play("win");
@@ -56,10 +56,8 @@ game.WinScreen = me.ScreenObject.extend({
     // update function
     update: function() {
         lives = initialLives;
-        // enter pressed ?
-        if (me.input.isKeyPressed('enter')) {
-            me.state.set(me.state.CREDITS, new game.CreditsScreen());
-            me.state.change(me.state.CREDITS);
+        document.onkeypress = function() {
+            me.state.change(me.state.MENU);
         }
         return true;
     },
@@ -71,7 +69,8 @@ game.WinScreen = me.ScreenObject.extend({
  
     // destroy function
     onDestroyEvent: function() {
-        me.input.unbindKey(me.input.KEY.ENTER);
+        //me.input.unbindKey(me.input.KEY.ENTER);
+        document.onkeypress = null;
  
         //just in case
         this.scrollertween.stop();
