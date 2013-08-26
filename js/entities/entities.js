@@ -136,6 +136,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
             if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
                 me.game.HUD.updateItemValue("timer", this.timerBonus);
                 me.audio.play("eat");
+
+                timeChange = new TimeChange(res.obj.pos.x, res.obj.pos.y, { image: 'bullet', spritewidth: 32 });
+                me.game.add(timeChange, this.z);
+                me.game.sort();
             }
         } else {
             this.isEnemyCollision = false;
