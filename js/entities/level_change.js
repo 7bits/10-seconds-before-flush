@@ -9,7 +9,6 @@ game.LevelChangeEntity = me.LevelEntity.extend({
         // looking for collisions with only special type enity
         if (obj.name === 'mainplayer') {
             nextLevel = this.gotolevel;
-            console.log(nextLevel);
 
             if (nextLevel != "null") {
                 this.goTo(nextLevel);

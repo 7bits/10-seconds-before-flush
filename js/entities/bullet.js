@@ -1,4 +1,4 @@
-var bullet = me.ObjectEntity.extend({
+var Bullet = me.ObjectEntity.extend({
 
     init: function (x, y, playerVelocity, direction, settings) {
         this.parent(x, y, settings);
@@ -6,7 +6,6 @@ var bullet = me.ObjectEntity.extend({
         this.gravity = 0;
         this.initVelocity = playerVelocity;
         this.shootDirection = direction;
-        console.log(this.shootDirection);
     },
 
     update: function () {
