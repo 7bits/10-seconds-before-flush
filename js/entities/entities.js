@@ -127,7 +127,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     me.game.HUD.updateItemValue("timer", this.timerPenaltyRate);
                     me.audio.play("enemy");
 
-                    timeChange = new TimeChange(res.obj.pos.x, res.obj.pos.y, { image: '-1', spritewidth: 37 });
+                    timeChange = new TimeChange(res.obj.pos.x, res.obj.pos.y, { image: '-2', spritewidth: 40 });
                     me.game.add(timeChange, this.z);
                     me.game.sort();
                 }

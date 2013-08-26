@@ -9,7 +9,6 @@ game.resources = [
 	// title screen
 	{name: "title_screen",    type:"image",	src: "data/img/gui/title_screen.png"},
 	{name: "win_screen",      type:"image",	src: "data/img/gui/win_screen.png"},
-	{name: "flush_screen",    type:"image",	src: "data/img/gui/flush_screen.gif"},
 	{name: "gameover_screen", type:"image",	src: "data/img/gui/gameover_screen.png"},
 
 	{name: "area01_level_tiles", type:"image", src: "data/img/map/tiles.png"},
