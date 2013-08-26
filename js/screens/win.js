@@ -41,7 +41,7 @@ game.WinScreen = me.ScreenObject.extend({
  
         // play something
         me.audio.play("win");
- 
+        me.audio.stopTrack();
     },
  
     // some callback for the tween objects
