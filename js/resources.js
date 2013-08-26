@@ -35,24 +35,26 @@ game.resources = [
 	{name: "level2", type: "tmx", src: "data/map/level2.tmx"},
 	{name: "level3", type: "tmx", src: "data/map/level3.tmx"},
 
-        // the spinning coin spritesheet
-        {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
-        {name: "flower",  type:"image", src: "data/img/sprite/flower.png"},
-        {name: "butterfly",  type:"image", src: "data/img/sprite/butterfly.png"},
-        {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
-        {name: "bullet",  type:"image", src: "data/img/sprite/bullet.png"},
-        {name: "-1",  type:"image", src: "data/img/sprite/-1.png"},
-        {name: "-2",  type:"image", src: "data/img/sprite/-2.png"},
-        {name: "-3",  type:"image", src: "data/img/sprite/-3.png"},
-        {name: "+1",  type:"image", src: "data/img/sprite/+1.png"},
-        {name: "+2",  type:"image", src: "data/img/sprite/+2.png"},
-        {name: "+3",  type:"image", src: "data/img/sprite/+3.png"},
+    {name: "spinning_coin_gold",  type:"image", src: "data/img/sprite/spinning_coin_gold.png"},
+    {name: "flower_1",  type:"image", src: "data/img/sprite/flower_1.png"},
+    {name: "flower_2",  type:"image", src: "data/img/sprite/flower_2.png"},
+    {name: "butterfly_1",  type:"image", src: "data/img/sprite/butterfly_1.png"},
+    {name: "butterfly_2",  type:"image", src: "data/img/sprite/butterfly_2.png"},
+    {name: "butterfly_3",  type:"image", src: "data/img/sprite/butterfly_2.png"},
+    {name: "poo",  type:"image", src: "data/img/sprite/poo.png"},
+    {name: "bullet",  type:"image", src: "data/img/sprite/bullet.png"},
+    {name: "-1",  type:"image", src: "data/img/sprite/-1.png"},
+    {name: "-2",  type:"image", src: "data/img/sprite/-2.png"},
+    {name: "-3",  type:"image", src: "data/img/sprite/-3.png"},
+    {name: "+1",  type:"image", src: "data/img/sprite/+1.png"},
+    {name: "+2",  type:"image", src: "data/img/sprite/+2.png"},
+    {name: "+3",  type:"image", src: "data/img/sprite/+3.png"},
 
-        // our enemty entity
-        {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
+    // our enemty entity
+    {name: "wheelie_right",       type:"image", src: "data/img/sprite/wheelie_right.png"},
 
-        // game font
-        {name: "32x32_font",          type:"image", src: "data/img/font/32x32_font.png"},
+    // game font
+    {name: "32x32_font",          type:"image", src: "data/img/font/32x32_font.png"},
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},

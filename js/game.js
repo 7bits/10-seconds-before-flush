@@ -43,8 +43,11 @@ var game = {
        // add our player entity in the entity pool
        me.entityPool.add("mainPlayer", game.PlayerEntity);
        me.entityPool.add("PooEntity", game.PooEntity);
-       me.entityPool.add("FlowerEntity", game.FlowerEntity);
-       me.entityPool.add("ButterflyEntity", game.ButterflyEntity);
+       me.entityPool.add("FlowerEntity1", game.FlowerEntity1);
+       me.entityPool.add("FlowerEntity2", game.FlowerEntity2);
+       me.entityPool.add("ButterflyEntity1", game.ButterflyEntity1);
+       me.entityPool.add("ButterflyEntity2", game.ButterflyEntity2);
+       me.entityPool.add("ButterflyEntity3", game.ButterflyEntity3);
        me.entityPool.add("LadderEntity", game.LadderEntity);
        me.entityPool.add("me.LevelEntity", game.LevelChangeEntity);
                  

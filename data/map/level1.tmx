@@ -58,9 +58,9 @@
   </data>
  </layer>
  <objectgroup color="#ff2f2f" name="EnemyEntities" width="40" height="15">
-  <object name="FlowerEntity" x="353" y="315" width="30" height="67"/>
-  <object name="FlowerEntity" x="962" y="315" width="30" height="67"/>
-  <object name="FlowerEntity" x="1094" y="158" width="30" height="67"/>
+  <object name="FlowerEntity1" x="353" y="315" width="30" height="67"/>
+  <object name="FlowerEntity2" x="962" y="315" width="30" height="67"/>
+  <object name="FlowerEntity1" x="1094" y="158" width="30" height="67"/>
  </objectgroup>
  <layer name="foreground" width="40" height="15">
   <data encoding="base64">
