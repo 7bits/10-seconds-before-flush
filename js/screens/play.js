@@ -55,7 +55,7 @@ game.PlayScreen = me.ScreenObject.extend({
      */
     onResetEvent: function() {	
         if (me.levelDirector.getCurrentLevelId() == "level0") {
-          me.levelDirector.loadLevel("level1");
+          me.levelDirector.loadLevel("level3");
         } else {
           me.levelDirector.loadLevel(me.levelDirector.getCurrentLevelId());
         }

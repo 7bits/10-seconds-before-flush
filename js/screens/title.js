@@ -10,7 +10,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
  
-        this.scroller = "WALK: < >  JUMP: X  SQUAT: C  SHOOT: SPACE  LET'S TRY TO MAKE A WORLD SHIT!";
+        this.scroller = null;
         this.scrollerpos = 600;
     },
  
@@ -73,9 +73,6 @@ game.TitleScreen = me.ScreenObject.extend({
     // draw function
     draw: function(context) {
         context.drawImage(this.title, 0, 0);
- 
-        this.font.draw(context, "PRESS ENTER TO PLAY", 336, 575);
-        this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 650);
     },
  
     // destroy function

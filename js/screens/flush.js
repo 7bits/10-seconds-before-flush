@@ -10,7 +10,7 @@ game.FlushScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
  
-        this.scroller = "A-HA-HA! THE WATER HAS YOU!";
+        this.scroller = null;
         this.scrollerpos = 600;
     },
  
@@ -65,9 +65,6 @@ game.FlushScreen = me.ScreenObject.extend({
     // draw function
     draw: function(context) {
         context.drawImage(this.title, 0, 0);
- 
-        this.font.draw(context, "PRESS ENTER TO PLAY", 336, 575);
-        this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 650);
     },
  
     // destroy function

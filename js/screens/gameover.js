@@ -10,7 +10,7 @@ game.GameOverScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
  
-        this.scroller = "YOU LOSE! A BEAUTY HAS WIN!";
+        this.scroller = null;
         this.scrollerpos = 600;
     },
  
@@ -66,9 +66,6 @@ game.GameOverScreen = me.ScreenObject.extend({
     // draw function
     draw: function(context) {
         context.drawImage(this.title, 0, 0);
- 
-        this.font.draw(context, "PRESS ENTER TO PLAY", 336, 575);
-        this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 650);
     },
  
     // destroy function
