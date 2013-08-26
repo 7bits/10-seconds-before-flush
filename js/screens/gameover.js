@@ -58,7 +58,8 @@ game.GameOverScreen = me.ScreenObject.extend({
         lives = initialLives;
         // enter pressed ?
         if (me.input.isKeyPressed('enter')) {
-            me.state.change(me.state.PLAY);
+            me.state.set(me.state.CREDITS, new game.CreditsScreen());
+            me.state.change(me.state.CREDITS);
         }
         return true;
     },
