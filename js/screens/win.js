@@ -55,6 +55,7 @@ game.WinScreen = me.ScreenObject.extend({
  
     // update function
     update: function() {
+        lives = initialLives;
         // enter pressed ?
         if (me.input.isKeyPressed('enter')) {
             me.state.change(me.state.PLAY);
