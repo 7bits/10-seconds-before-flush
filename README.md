@@ -1,12 +1,13 @@
-melonJS boilerplate
--------------------------------------------------------------------------------
+10 Seconds Before Flush - Geeks-n-chicks - Ludum Dare 27 Jam Entry 
+------------------------------------------------------------------
+You are a Fecalator from "Dogma" movie. Your goal is to reach an Exit from the sewer pipeline. It's not so easy! You need to go through 3 levels in 10 seconds each. You need to eat poos and avoid flowers and butterflies - your enemies. 
 
-features :
-- video autoscaling
-- mobile optimized HTML/CSS
-- swiping disabled on iOS devices
-- debug Panel (if #debug)
+Every poo gives you a second, every enemy - takes your 2 seconds. 
 
--------------------------------------------------------------------------------
-Copyright (C) 2011 - 2013, Olivier Biot, Jason Oster
-melonJS is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php)
+Your win is to appear in the World. Let's start the game and good luck from 7bits team! Enjoy! 
+
+Technical details: 
+* Javascript
+* HTML5 canvas
+* Melonjs game engine 
+* For now, we support only for recent desktop versions of Firefox / Chrome
