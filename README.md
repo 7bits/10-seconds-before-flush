@@ -16,6 +16,8 @@ Technical details:
 ### Demo
 http://old48.rordev.ru
 
+![Alt text](https://dl.dropboxusercontent.com/u/13065653/10-seconds-before-flush_data_img_gui_title_screen.png%20at%20master%20·%207bits_10-seconds-before-flush.png)
+
 ### Ludum Dare Entry page (Jam):
 http://www.ludumdare.com/compo/ludum-dare-27/?action=preview&uid=27697
 
