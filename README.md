@@ -1,4 +1,4 @@
-### 10 Seconds Before Flush - Geeks-n-chicks - Ludum Dare 27 Jam Entry 
+### 10 Seconds Before Flush - Geeks-n-chicks - Ludum Dare 27
 
 You are a Fecalator from "Dogma" movie. Your goal is to reach an Exit from the sewer pipeline. It's not so easy! You need to go through 3 levels in 10 seconds each. You need to eat poos and avoid flowers and butterflies - your enemies. 
 
@@ -16,7 +16,7 @@ Technical details:
 ### Demo
 http://old48.rordev.ru
 
-### Ludum Dare Entry page:
+### Ludum Dare Entry page (Jam):
 http://www.ludumdare.com/compo/ludum-dare-27/?action=preview&uid=27697
 
 
